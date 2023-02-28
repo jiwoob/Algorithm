@@ -1,4 +1,3 @@
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -10,7 +9,7 @@ public class Solution {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int T = Integer.parseInt(br.readLine());
-		for (int I = 0; I < T; I++) {
+		for (int I = 1; I <= T; I++) {
 			int N = Integer.parseInt(br.readLine());
 
 			int[] arr = new int[5001];
@@ -31,7 +30,7 @@ public class Solution {
 				res[i] = arr[Integer.parseInt(br.readLine())];
 			}
 			
-			System.out.print("#" + (I+1) + " ");
+			System.out.print("#" + I + " ");
 			for(int i=0; i<p; i++) {
 				System.out.print(res[i]+" ");
 			}
