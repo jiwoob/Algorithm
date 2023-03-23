@@ -35,9 +35,10 @@ public class Main {
 		cnt = 0;
 		dfs(1);
 		Arrays.fill(visited, false);
+		System.out.println(cnt);
 		cnt = 0;
 		bfs(1);
-		System.out.println(cnt-1);
+//		System.out.println(cnt - 1);
 	}
 
 	private static void bfs(int i) {
@@ -59,7 +60,14 @@ public class Main {
 	}
 
 	private static void dfs(int i) {
-		//
+		visited[i] = true;
+		for (int x : graph[i]) {
+			if (!visited[x]) {
+				dfs(x);
+				cnt++;
+			}
+		}
+		return;
 
 	}
 }
